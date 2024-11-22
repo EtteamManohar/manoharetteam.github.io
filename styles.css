@@ -1,0 +1,256 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure full height for body and html */
+}
+
+body {
+    /* Rainbow Gradient Background */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6a00, #f14b87, #33ccff); /* Rainbow gradient */
+    color: #000; /* Black text color */
+    font-size: 16px; /* Base font size */
+    font-family: 'Balthazar', 'Droid Serif', serif;
+    padding-bottom: 40px; /* Reduced padding at the bottom */
+    line-height: 1.3; /* Improve readability with line height */
+}
+
+/* Adding an overlay to darken the background for more contrast (optional) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Light black overlay for contrast */
+    z-index: -1; /* Ensure it stays behind the content */
+}
+
+/* Container */
+#container {
+    min-height: 100%; /* Ensures full screen height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Core Layout */
+#w {
+    background: rgba(255, 255, 255, 0.9); /* Light white background for content */
+    margin: 0 auto;
+    padding: 20px 30px; /* Reduced padding for content */
+    padding-top: 30px; /* Reduced top padding */
+    min-width: 260px;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect for the main content */
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Reduced margin */
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#info {
+    flex: 1;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+#photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo img {
+    border-radius: 50%;
+    width: 130px; /* Slightly reduced width */
+    height: 130px; /* Slightly reduced height */
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#photo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Section */
+#profile {
+    padding-bottom: 15px; /* Reduced bottom padding */
+}
+
+/* Skills Section */
+#skills-left {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 8px; /* Reduced margin between list items */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    color: #0029ff;
+    transform: translateX(10px); /* Slide effect on hover */
+}
+
+/* Flex Layout for Date and Info */
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.date {
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Buttons */
+button {
+    background: #0029ff; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ffbc00; /* Hover effect */
+}
+
+/* Links */
+a {
+    color: #0029ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0029ff;
+}
+
+/* Responsive Design for Different Screen Sizes */
+
+/* Small devices (Phones, up to 740px) */
+@media only screen and (max-width: 740px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #info,
+    #photo {
+        text-align: center;
+    }
+
+    #photo img {
+        width: 100px; /* Reduced width */
+        height: 100px; /* Reduced height */
+    }
+
+    #w {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .flex-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .date {
+        margin-top: 10px;
+    }
+}
+
+/* Medium devices (Tablets, up to 570px) */
+@media only screen and (max-width: 570px) {
+    ul li {
+        display: inline-block;
+        width: 100px; /* Reduced width */
+        text-align: center;
+        margin-right: 8px;
+    }
+
+    #skills-left {
+        margin-bottom: 12px; /* Reduced margin */
+    }
+
+    #w {
+        padding: 15px 8px; /* Reduced padding */
+    }
+}
+
+/* Small Tablets (Portrait mode, up to 480px) */
+@media only screen and (max-width: 480px) {
+    #photo img {
+        width: 90px; /* Reduced width */
+        height: 90px; /* Reduced height */
+    }
+
+    ul li {
+        width: 90px; /* Reduced width */
+    }
+
+    #w {
+        margin: 0 10px;
+    }
+}
+
+/* Smallest screens (Phones, up to 320px) */
+@media only screen and (max-width: 320px) {
+    #w {
+        margin: 0 5px;
+    }
+
+    ul li {
+        width: 80px; /* Reduced width */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .date {
+        font-size: 0.9em;
+    }
+}
