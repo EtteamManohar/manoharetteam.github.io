@@ -1,132 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manohar's Portfolio</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body and Background */
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Soft gradient background */
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-
-        /* Main content container */
-        .container {
-            padding: 50px;
-            background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for a classy look */
-            border-radius: 15px;
-            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            width: 90%;
-        }
-
-        /* Title Styling */
-        h1 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        /* Introduction text */
-        p {
-            font-size: 1.5em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* About Section */
-        .about {
-            background-color: #f8f8f8;
-            padding: 30px;
-            margin-top: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .about h2 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #3498db;
-        }
-
-        .about p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact {
-            margin-top: 50px;
-        }
-
-        .contact h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .contact p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Footer Section */
-        footer {
-            margin-top: 50px;
-            font-size: 1em;
-            color: #777;
-        }
-
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My Responsive Resume</title>
+    <meta name="author" content="Jake Rocheleau">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
 </head>
+
 <body>
-    <div class="container">
-        <!-- Introduction Section -->
-        <h1>Hi, I'm Manohar</h1>
-        <p>Welcome to my portfolio website. I am a passionate developer.</p>
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-creativeminds.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-        <!-- About Section -->
-        <div class="about">
-            <h2>About Me</h2>
-            <p>I'm a creative problem-solver with a love for technology. I specialize in web development, and creating clean, modern websites. With a background in both front-end and back-end development, I focus on building responsive, user-friendly websites.</p>
-        </div>
+    <div id="container"> <!-- Wrapper to ensure full screen height -->
+        <div id="w" itemscope itemtype="http://schema.org/Person">
+            <header class="clearfix">
+                <div class="header-content">
+                    <div id="info">
+                        <h1><span itemprop="name">Manohar Etteam</span></h1>
+                        <span itemprop="addressLocality">Hyderabad</span>, <span itemprop="addressCountry">India</span><br>
+                        <span itemprop="email">manoharetteam@gmail.com</span><br>
+                        <p>LinkedIn:<a href="https://www.linkedin.com/in/manoharetteam/" itemprop="url">manoharetteam</a><br></p>
+						<p>GitHub:<a href="https://github.com/ManoharEtteam/" itemprop="url">manoharetteam</a></p>
+                    </div>
+                    <div id="photo">
+                        <img src="Manohar.jpg" alt="Manohar Etteam" itemprop="image" />
+                    </div>
+                </div>
+            </header>
 
-        <!-- Contact Section -->
-        <div class="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out for collaboration or just to say hello! email: manoharetteam@gmail.com</p>
-        </div>
+            <div id="space">
+                <section id="profile">
+                    <h2>Summary</h2>
+                    <p itemprop="description">Detail-oriented Software Engineer with 2 years of specialized experience in frontend and backend development, dedicated to creating user-friendly web and gaming applications. Proficient in Java, Spring Boot, JavaScript, React.js, PostgresSQL, and more. Focused on delivering robust and scalable solutions.</p>
+                </section>
+                <section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
+                    <h2>Technical Skills</h2>
+                    <div id="skills-left">
+                        <ul>
+                            <li itemprop="itemListElement">HTML5/CSS3</li>
+                            <li itemprop="itemListElement">JavaScript</li>
+                            <li itemprop="itemListElement">React</li>
+                            <li itemprop="itemListElement">Java</li>
+                            <li itemprop="itemListElement">Spring Boot</li>
+                            <li itemprop="itemListElement">Mongo DB</li>
+							<li itemprop="itemListElement">PostgresSQL</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
 
-        <!-- Footer Section -->
-        <footer>
-            <p>© 2024 Manohar. All rights reserved. | <a href="mailto:manoharetteam@gmail.com">Email Me</a></p>
-        </footer>
-    </div>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="flex-row">
+                    <div>
+                        <h4>MLR Institute of Technology</h4>
+                    </div>
+                    <div>
+                        <p class="date">July 2018- July 2022</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Work Experience</h2>
+                <div class="flex-row">
+                    <div>
+                        <h4>Ivy Comptech - FullStack Developer</h4>
+                    </div>
+                    <div>
+                        <p class="date">July 2022 - Present</p>
+                    </div>
+                </div>
+            </section>
+        </div> <!-- End of #w -->
+    </div> <!-- End of #container -->
 </body>
+
 </html>
